@@ -1,18 +1,16 @@
 {
-  "name": "duotone-dark-syntax",
+  "name": "chameleon-syntax",
   "theme": "syntax",
   "version": "2.0.0",
-  "description": "A dark DuoTone syntax theme",
+  "description": "A color shifting syntax theme",
   "keywords": [
-    "dark",
-    "purple",
-    "gold",
+    "multicolor",
     "duotone",
     "syntax"
   ],
-  "repository": "https://github.com/simurai/duotone-dark-syntax",
+  "repository": "https://github.com/simurai/chameleon-syntax",
   "license": "MIT",
-  "main": "lib/duotone",
+  "main": "lib/main",
   "engines": {
     "atom": ">1.9.0"
   },

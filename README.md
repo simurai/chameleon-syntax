@@ -1,4 +1,4 @@
-# DuoTone dark
+# Chameleon theme
 
 A double-hue syntax theme for Atom.
 
