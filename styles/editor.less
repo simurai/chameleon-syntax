@@ -7,11 +7,11 @@ atom-text-editor,
   background-color: var(--bg-3);
 
   .line.cursor-line {
-    background-color: @syntax-cursor-line;
+    background-color: var(--bg-4);
   }
 
   .invisible {
-    color: @syntax-text-color;
+    color: var(--bg-2);
   }
 
   .cursor {
@@ -20,45 +20,46 @@ atom-text-editor,
   }
 
   .selection .region {
-    background-color: @syntax-selection-color;
+    background-color: var(--bg-2);
   }
 
   .bracket-matcher .region {
-    border-bottom: 1px solid var(--accent);
+    border-bottom: 1px solid var(--ac-3);
   }
 
   .invisible-character {
-    color: @syntax-invisible-character-color;
+    color: var(--bg-2);
     -webkit-font-smoothing: antialiased;
   }
 
   .indent-guide {
-    color: @syntax-indent-guide-color;
+    color: var(--bg-2);
   }
 
   .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
+    background-color: var(--bg-2);
   }
 
   // find + replace
   .find-result .region.region.region,
   .current-result .region.region.region {
-    border-radius: 0px;
-    background-color: @syntax-result-marker-color;
+    border-radius: 3px;
     transition: border-color .4s;
   }
   .find-result .region.region.region {
     border: 2px solid transparent;
+    opacity: .5;
+    background-color: var(--ac-5);
   }
   .current-result .region.region.region {
-    border: 2px solid @syntax-result-marker-color-selected;
+    border: 2px solid var(--ac-3);
     transition-duration: .1s;
   }
 
   .gutter {
 
     .line-number {
-      color: @syntax-gutter-text-color;
+      color: var(--fg-5);
       -webkit-font-smoothing: antialiased;
 
       &.git-line-removed:before {
@@ -75,8 +76,8 @@ atom-text-editor,
       }
 
       &.cursor-line {
-        color: @syntax-gutter-text-color-selected;
-        background-color: @syntax-gutter-background-color-selected;
+        color: var(--fg-4);
+        // background-color: var(--bg-4);
       }
 
       &.cursor-line-no-selection {
@@ -84,7 +85,7 @@ atom-text-editor,
       }
 
       .icon-right {
-        color: @syntax-text-color;
+        color: var(--fg-4);
       }
     }
   }
@@ -92,6 +93,6 @@ atom-text-editor,
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @syntax-gutter-text-color-selected;
+    color: var(--ac-3);
   }
 }

@@ -1,0 +1,148 @@
+
+// Packages
+
+
+// Bundled Packages ----------------------------
+
+.title-bar.title-bar {
+  color: var(--fg-4);
+  background-color: var(--bg-5);
+}
+
+
+.tab-bar {
+  background-color: var(--bg-4);
+
+  .title.title {
+    color: var(--fg-4);
+    background: var(--bg-4);
+  }
+  .tab {
+    &::before {
+      background-color: var(--ac-2);
+    }
+    &.modified .close-icon.close-icon {
+      color: var(--ac-2);
+    }
+    .close-icon.close-icon.close-icon:hover {
+      color: var(--bg-3);
+      background-color: var(--ac-2);
+    }
+  }
+
+  .tab.tab.active {
+    background: var(--bg-3);
+    &::after {
+      border-bottom-color: var(--bg-3);
+    }
+    .title {
+      color: var(--fg-1);
+      background: var(--bg-3);
+    }
+  }
+}
+
+
+
+.tree-view {
+  background-color: var(--bg-4);
+
+  .entry.entry,
+  .list-item.list-item.list-item {
+    color: var(--fg-4);
+    .selected {
+      color: var(--fg-1);
+      &::before {
+        background-color: var(--bg-3);
+      }
+    }
+  }
+}
+
+
+.status-bar {
+  background-color: var(--bg-5);
+
+  .cursor-position a,
+  a {
+    color: var(--fg-4);
+  }
+
+  // normalize colors
+  .deprecation-cop-status,
+  .incompatible-packages-status {
+    color: var(--fg-4);
+  }
+}
+
+
+.find-and-replace,
+.project-find {
+  .subtle-info-message.subtle-info-message,
+  .options-label {
+    color: var(--fg-4);
+    .options {
+      color: var(--fg-3);
+    }
+  }
+  .highlight.highlight.highlight {
+    color: var(--fg-1);
+    background-color: var(--bg-2);
+  }
+}
+
+.settings-view {
+  color: var(--fg-3);
+
+  & > .panels,
+  .config-menu {
+    background-color: var(--bg-3);
+  }
+
+  .package-card {
+    color: var(--fg-2);
+    background-color: var(--bg-2);
+    .package-name {
+      color: var(--fg-1);
+    }
+    .meta-user .author {
+      color: var(--fg-4);
+    }
+  }
+
+  .text {
+    color: var(--fg-3);
+  }
+
+  .link {
+    color: var(--ac-2);
+  }
+
+  a.icon {
+    color: var(--fg-3);
+    &:before {
+      color: var(--fg-4);
+    }
+  }
+  .icon::before {
+    color: var(--fg-4);
+  }
+
+  section .section-heading,
+  .section .section-heading,
+  .sub-section .sub-section-heading {
+    color: var(--fg-1);
+  }
+}
+
+
+
+
+// Community Packages ----------------------------
+
+.tool-bar,
+.tool-bar button.tool-bar-btn {
+  color: var(--fg-4);
+  border-color: var(--bg-4);
+  background-color: var(--bg-4);
+}
