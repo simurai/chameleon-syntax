@@ -3,8 +3,8 @@
 
 atom-text-editor,
 :host {
-  color: @syntax-text-color;
-  background-color: @syntax-background-color;
+  color: var(--fg-3);
+  background-color: var(--bg-3);
 
   .line.cursor-line {
     background-color: @syntax-cursor-line;
@@ -15,7 +15,7 @@ atom-text-editor,
   }
 
   .cursor {
-    border-color: var(--accent);
+    border-color: var(--ac-3);
     border-left-width: 2px;
   }
 
