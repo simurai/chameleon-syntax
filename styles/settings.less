@@ -1,10 +1,11 @@
 @import "colors";
 
 // Custom settings
-.theme-duotone-dark-syntax .settings-view {
+.theme-chameleon-syntax .settings-view {
 
-  [id="duotone-dark-syntax.color.uno"],
-  [id="duotone-dark-syntax.color.duo"] {
+  [id="chameleon-syntax.color.bg"],
+  [id="chameleon-syntax.color.fg"],
+  [id="chameleon-syntax.color.ac"] {
     width: 2.75em;
     margin-left: -3.5em;
     position: absolute;
@@ -21,23 +22,23 @@
     }
   }
 
-  [id="duotone-dark-syntax.color.uno"]:after {
+  [id="chameleon-syntax.color.bg"]:after {
     content: "";
     position: absolute;
     top: 0;
     left: -1.5em;
     width: 6px;
-    height: 9em;
+    height: 14em;
     border-radius: 1em;
     background-image: linear-gradient(to bottom,
-      var(--uno-1) 12.5%,
-      var(--uno-2) 12.5%, var(--uno-2) 25%,
-      var(--uno-3) 25%,   var(--uno-3) 37.5%,
-      var(--uno-4) 37.5%, var(--uno-4) 50%,
-      var(--uno-5) 50%,   var(--uno-5) 62.5%,
-      var(--duo-1) 62.5%, var(--duo-1) 75%,
-      var(--duo-2) 75%,   var(--duo-2) 87.5%,
-      var(--duo-3) 87.5%
+      var(--fg-1) 12.5%,
+      var(--fg-2) 12.5%, var(--fg-2) 25%,
+      var(--fg-3) 25%,   var(--fg-3) 37.5%,
+      var(--fg-4) 37.5%, var(--fg-4) 50%,
+      var(--fg-5) 50%,   var(--fg-5) 62.5%,
+      var(--ac-1) 62.5%, var(--ac-1) 75%,
+      var(--ac-2) 75%,   var(--ac-2) 87.5%,
+      var(--ac-3) 87.5%
     );
   }
 
