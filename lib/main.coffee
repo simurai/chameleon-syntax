@@ -55,11 +55,11 @@ setColors = ->
   _fgScale = chroma.scale([_fgHigh, _fgMid, _fgLow]).colors(5)
   _acScale = chroma.scale([_acHigh, _acMid, _acLow]).colors(5)
 
-  root.style.setProperty('--bg-1', _acScale[0])
-  root.style.setProperty('--bg-2', _acScale[1])
-  root.style.setProperty('--bg-3', _acScale[2]) # <- set by user
-  root.style.setProperty('--bg-4', _acScale[3])
-  root.style.setProperty('--bg-5', _acScale[4])
+  root.style.setProperty('--bg-1', _bgScale[0])
+  root.style.setProperty('--bg-2', _bgScale[1])
+  root.style.setProperty('--bg-3', _bgScale[2]) # <- set by user
+  root.style.setProperty('--bg-4', _bgScale[3])
+  root.style.setProperty('--bg-5', _bgScale[4])
 
   root.style.setProperty('--fg-1', _fgScale[0])
   root.style.setProperty('--fg-2', _fgScale[1])
