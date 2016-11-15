@@ -43,7 +43,7 @@ setColors = ->
 
   _fgHigh = chroma.mix( fg, 'white', 0.5); # mix with white
   _fgMid  = fg                             # set by user
-  _fgLow  = chroma.mix( fg, _bgLow, 0.75); # mix with background
+  _fgLow  = chroma.mix( fg, _bgLow, 0.66); # mix with background
 
   _acHigh = chroma.mix( ac, 'white', 0.5); # mix with white
   _acMid = ac                                           # set by user
