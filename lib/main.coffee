@@ -37,17 +37,17 @@ setColors = ->
 
   # Color mixing
   _bgHigh = chroma.mix( bg, 'white', 0.1); # mix with white
-  _bgMid  = bg                                           # set by user
-  _bgLow  = chroma.mix( bg, 'black', 0.3); # mix with background
+  _bgMid  = bg                             # set by user
+  _bgLow  = chroma.mix( bg, 'black', 0.4); # mix with background
 
 
-  _fgHigh = chroma.mix( fg, 'white', 0.5); # mix with white
+  _fgHigh = chroma.mix( fg, 'white', 0.66); # mix with white
   _fgMid  = fg                             # set by user
-  _fgLow  = chroma.mix( fg, _bgLow, 0.66); # mix with background
+  _fgLow  = chroma.mix( fg, _bgMid, 0.66); # mix with background
 
-  _acHigh = chroma.mix( ac, 'white', 0.5); # mix with white
+  _acHigh = chroma.mix( ac, 'white', 0.33); # mix with white
   _acMid = ac                                           # set by user
-  _acLow  = chroma.mix( ac, _bgLow, 0.66); # mix with background
+  _acLow  = chroma.mix( ac, _bgMid, 0.66); # mix with background
 
 
   # Color scales
