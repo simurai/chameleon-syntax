@@ -112,12 +112,12 @@
     .package-name {
       color: var(--fg-1);
     }
-    .meta-user .author {
+    .meta-user [class="author"] {
       color: var(--fg-4);
     }
   }
 
-  .text {
+  p {
     color: var(--fg-3);
   }
 
@@ -125,6 +125,7 @@
     color: var(--ac-2);
   }
 
+  .breadcrumb > li a,
   a.icon {
     color: var(--fg-3);
     &:before {
@@ -132,6 +133,14 @@
     }
   }
   .icon::before {
+    color: var(--fg-4);
+  }
+
+  .settings-panel label {
+    color: var(--fg-3);
+  }
+
+  .setting-description {
     color: var(--fg-4);
   }
 

@@ -19,17 +19,19 @@ atom-text-editor[mini] {
   color: var(--fg-3);
   background-color: var(--bg-5);
 
-  &.is-focused{
+  &.is-focused {
     border-color: var(--ac-2);
     box-shadow: 0 0 0 1px var(--ac-2);
     background-color: var(--ac-5);
+    background-image: linear-gradient(var(--bg-2), var(--bg-2));
+    background-blend-mode: hard-light;
 
     &::shadow {
       .placeholder-text {
         color: var(--ac-4);
       }
       .selection .region {
-        background-color: var(--ac-4);
+        background-color: var(--ac-5);
       }
     }
   }
@@ -42,7 +44,7 @@ atom-text-editor[mini] {
       color: var(--fg-5);
     }
     .selection .region {
-      background-color: var(--bg-4);
+      background-color: var(--bg-3);
     }
   }
 }
