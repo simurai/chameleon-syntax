@@ -3,27 +3,79 @@
 
 .theme-chameleon-syntax.theme-one-dark-ui {
 
+
+// Buttons -----------------------------------------
+
 .btn,
 .btn.btn-default {
   color: var(--fg-2);
   background: var(--bg-2);
   &:hover {
-    opacity: .9;
-    background: var(--bg-2);
+    // opacity: .9;
+    background: var(--bg-1);
   }
   &.selected {
-    color: var(--ac-1);
+    color: var(--bg-5);
     background: var(--ac-3);
     &:hover {
-      background: var(--ac-3);
+      background: var(--ac-2);
     }
   }
 }
 
+
+// Inputs -----------------------------------------
+
+.input-radio {
+  background-color: var(--ac-5);
+  &:before {
+    background-color: var(--ac-5);
+  }
+  &:checked {
+    background-color: var(--ac-3);
+  }
+}
+
+.input-checkbox {
+  background-color: var(--ac-5);
+  &:before,
+  &:after {
+    background-color: var(--ac-5);
+  }
+  &:checked {
+    background-color: var(--ac-3);
+  }
+}
+.input-toggle {
+  background-color: var(--ac-5);
+  &:before {
+    background-color: var(--ac-4);
+  }
+  &:checked {
+    background-color: var(--ac-3);
+    &:before {
+      background-color: var(--ac-5);
+    }
+  }
+}
+
+.input-range {
+  background-color: var(--ac-5);
+  &::-webkit-slider-thumb {
+    background-color: var(--ac-3);
+  }
+}
+
+
+
+// Text -----------------------------------------
+
 .text-subtle {
   color: var(--fg-5);
 }
-
+.text-highlight {
+  color: var(--fg-1);
+}
 .highlight {
   color: var(--fg-1);
   font-weight: 400;
@@ -31,5 +83,82 @@
 }
 
 
+// Modal -----------------------------------------
+
+atom-panel.modal {
+  color: var(--fg-3);
+
+  &:before { // box
+    background-color: var(--bg-4);
+  }
+  &:after { // backdrop
+    background-color: var(--bg-5);
+    opacity: .95;
+  }
+
+  .select-list ol.list-group {
+    background-color: var(--bg-3);
+    li {
+      color: var(--fg-2);
+      &.selected {
+        color: var(--fg-1);
+        background-color: var(--bg-2);
+      }
+      .secondary-line {
+        color: var(--fg-4);
+      }
+    }
+  }
+}
+
+
+// Tooltip -----------------------------------------
+
+.tooltip {
+  &-inner {
+    color: var(--bg-3);
+    background-color: var(--ac-3);
+
+    .keystroke {
+      color: var(--ac-3);
+      background-color: var(--bg-2);
+    }
+  }
+}
+
+// for some reason this has to be an attribute selector to work
+[class="tooltip top"] .tooltip-arrow { border-top-color: var(--ac-3); }
+
+
+// Progress -----------------------------------------
+
+progress {
+  box-shadow: none;
+  background-color: var(--ac-5);
+  &:indeterminate {
+    background-image: linear-gradient(-45deg, transparent 33%, var(--ac-4) 33%, var(--ac-4) 66%, transparent 66%);
+  }
+  &::-webkit-progress-value {
+    background-color: var(--ac-3);
+  }
+}
+
+.loading {
+  background: radial-gradient(var(--ac-3) 0.1em, transparent 0.11em);
+  &:before { border-color: var(--ac-3) transparent transparent transparent; }
+  &:after { border-color: var(--ac-5) transparent transparent transparent; }
+}
+
+// Misc -----------------------------------------
+
+.badge:not(.badge-info):not(.badge-success):not(.badge-warning):not(.badge-error) {
+  color: var(--ac-1);
+  background-color: var(--ac-5);
+}
+
+kbd {
+  color: var(--ac-1);
+  background-color: var(--ac-5);
+}
 
 } // end of theme selector

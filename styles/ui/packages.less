@@ -1,6 +1,8 @@
 
 // Packages
 
+
+
 .theme-chameleon-syntax.theme-one-dark-ui {
 
 
@@ -15,11 +17,12 @@
 .tab-bar {
   background-color: var(--bg-4);
 
-  .title.title {
+  // this is pretty fragile because .title gets turned into .syntax-title
+  [is="tabs-tab"] > div:first-child {
     color: var(--fg-4);
-    background: var(--bg-4);
+    background-color: var(--bg-4);
   }
-  .tab {
+  [is="tabs-tab"] {
     &::before {
       background-color: var(--ac-2);
     }
@@ -32,31 +35,33 @@
     }
   }
 
-  .tab.tab.active {
+  [is="tabs-tab"].active {
     background: var(--bg-3);
     &::after {
       border-bottom-color: var(--bg-3);
     }
-    .title {
-      color: var(--fg-1);
-      background: var(--bg-3);
-    }
+  }
+
+  [is="tabs-tab"].active > div:first-child {
+    color: var(--fg-1);
+    background: var(--bg-3);
   }
 }
 
 
 
+
+
 .tree-view {
   background-color: var(--bg-4);
-
-  .entry.entry,
-  .list-item.list-item.list-item {
+  .entry,
+  .list-item {
     color: var(--fg-4);
-    .selected {
-      color: var(--fg-1);
-      &::before {
-        background-color: var(--bg-3);
-      }
+  }
+  .selected {
+    color: var(--fg-1);
+    &::before {
+      background-color: var(--bg-3);
     }
   }
 }
@@ -137,6 +142,18 @@
   }
 }
 
+.styleguide {
+  .example-rendered {
+    background-color: var(--bg-3);
+  }
+  &-header h1 {
+    color: var(--fg-1);
+  }
+  &-sections > section {
+    background-color: var(--bg-3);
+  }
+
+}
 
 
 
