@@ -73,6 +73,10 @@ setColors = ->
   root.style.setProperty('--ac-4', _acScale[3])
   root.style.setProperty('--ac-5', _acScale[4])
 
+  root.style.setProperty('--cl-info',    chroma.mix( fg, 'hsl(208, 100%, 60%)', 0.75) )
+  root.style.setProperty('--cl-success', chroma.mix( fg, 'hsl(150,  60%, 54%)', 0.75) )
+  root.style.setProperty('--cl-warning', chroma.mix( fg, 'hsl(40,   60%, 70%)', 0.75) )
+  root.style.setProperty('--cl-error',   chroma.mix( fg, 'hsl(0,    70%, 60%)', 0.75) )
 
 
 # Unset Colors -----------------------
@@ -94,3 +98,8 @@ unsetColors = ->
   root.style.removeProperty('--ac-3')
   root.style.removeProperty('--ac-4')
   root.style.removeProperty('--ac-5')
+
+  root.style.removeProperty('--cl-info')
+  root.style.removeProperty('--cl-success')
+  root.style.removeProperty('--cl-warning')
+  root.style.removeProperty('--cl-error')
