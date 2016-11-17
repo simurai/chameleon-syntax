@@ -20,7 +20,7 @@
   },
   "configSchema": {
     "color": {
-      "title": "Custom Colors",
+      "title": "Colors",
       "type": "object",
       "properties": {
         "bg": {
