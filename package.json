@@ -28,21 +28,21 @@
           "description": "Choose the background color",
           "order": 1,
           "type": "color",
-          "default": "#2a2833"
+          "default": "#49ff94"
         },
         "fg": {
           "title": "Foreground",
           "description": "Choose the foreground (text) color",
           "order": 2,
           "type": "color",
-          "default": "#817A9F"
+          "default": "#383747"
         },
         "ac": {
           "title": "Accent",
           "description": "Choose the accent color",
           "order": 3,
           "type": "color",
-          "default": "#FFDC80"
+          "default": "#7093a8"
         }
       }
     }
