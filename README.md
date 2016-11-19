@@ -1,8 +1,8 @@
 # Chameleon syntax theme
 
-A color shifting syntax theme for Atom.
-
 > Warning: This is still experimental (see FAQ). Only use this theme together with the Chameleon UI theme (see under Install).
+
+A color shifting syntax theme for Atom.
 
 ![Chameleon UI theme](https://cloud.githubusercontent.com/assets/378023/20452091/96804838-ae45-11e6-8e72-917b5cfd6e43.gif)
 
