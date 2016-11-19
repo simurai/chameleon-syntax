@@ -1,54 +1,36 @@
-# Chameleon theme
+# Chameleon syntax theme
 
-A double-hue syntax theme for Atom.
+A color shifting syntax theme for Atom.
 
-<img alt="DuoTone dark" sizes="272px"
-  src="https://cloud.githubusercontent.com/assets/378023/6996305/4d567190-dbbb-11e4-8ae8-4be016a85c68.png"
-  srcset="https://cloud.githubusercontent.com/assets/378023/6995981/3d455d76-dba6-11e4-9740-23202591201b.png 544w">
+> Warning: This is still experimental (see FAQ). Only use this theme together with the Chameleon UI theme (see under Install).
 
-DuoTone themes use only 2 hues (8 shades in total). It __tones down__ less important parts (like punctuation and brackets) and highlights only the __important__ ones. This leads to a more calm color scheme, but still lets you find the stuff you're looking for.
-
-<img alt="CSS in DuoTone dark" sizes="780px"
-  src="https://cloud.githubusercontent.com/assets/378023/6996868/871b6440-dbdd-11e4-834e-b28363026d0c.png"
-  srcset="https://cloud.githubusercontent.com/assets/378023/6996081/4dc96804-dbab-11e4-95f9-cc06a67452cb.png 1560w">
-
-<img alt="HTML in DuoTone dark" sizes="780px"
-  src="https://cloud.githubusercontent.com/assets/378023/6996874/aee76b40-dbdd-11e4-95e1-a40258a50c26.png"
-  srcset="https://cloud.githubusercontent.com/assets/378023/6996875/b2160e02-dbdd-11e4-913e-7dc006437d94.png 1560w">
+![Chameleon UI theme](https://cloud.githubusercontent.com/assets/378023/20452091/96804838-ae45-11e6-8e72-917b5cfd6e43.gif)
 
 
-## Language support
+### Install
 
-DuoTone themes are optimized for many languages:
+This theme isn’t published. But you can still try it out by installing it from Atom’s settings. Go to __Settings > Install__ and then paste `simurai/chameleon-syntax` and hit enter. Don’t forget to also install `simurai/chameleon-ui` since they depend on each other.
 
-> C, Clojure, CoffeeScript, C#, CSS, GF Markdown, Go, Haskell, HTML, Java, JavaScript, JSON, Less, Perl, PHP, Python, Ruby, SASS, SCSS, Stylus, XML, YAML...
-
-See the list of [all languages](https://github.com/simurai/duotone-syntax/tree/master/styles/languages).
-
-## Install
-
-Search for `duotone-dark-syntax` in Atom's settings. Or install via CL:
-
-```
-apm install duotone-dark-syntax
-```
+Then switch to the "Themes" tab and pick **Chameleon** for both, UI and Syntax.
 
 
 ## Settings
 
-You can change the color scheme by going to `Settings > Themes > duotone-dark-syntax Theme` (or the cog icon next to the theme picker). There you can customize the main and accent color.
+You can change the color scheme by going to `Settings > Themes > chameleon-syntax Theme` (or the cog icon next to the theme picker). There you can customize the background, text and accent color.
 
-![Custom Colors](https://cloud.githubusercontent.com/assets/378023/20046592/ccb836fa-a4ee-11e6-8441-816c8e0709c7.png)
-
-
-## Variations
-
-Here a list of all [DuoTone themes](https://atom.io/themes/search?utf8=%E2%9C%93&q=keyword:duotone). Or at least the ones that have the `duotone` keyword added. :grin:
+![Chameleon theme color picker](https://cloud.githubusercontent.com/assets/378023/20452184/6903a7cc-ae47-11e6-9fa1-6fa9e72caa42.png)
 
 
-### Issues and contributing
+### FAQ
 
-If you would like to create a new __Issue__ or __PR__, please do so in:
+__Why isn’t this theme published?__
 
-- __this repo__ if it's about __color__ changes, like in `colors.less` or `syntax-variables.less`.
-- __[DuoTone master template](https://github.com/simurai/duotone-syntax)__ if it's about __everything else__, like in improving language support. Changes will trickle down into this theme too.
+This theme is pretty experimental and not all packages get updated with the right colors.
+
+By convention, Atom themes have to define a list of Less variables that other packages will use to make their package look consistent with the rest of the UI. This theme uses custom properties (CSS variables) for its colors which unfortunately aren’t compatible with Less variables.
+
+You can certainly use it, but there might be issues where certain areas are red. See next question.
+
+__I see red?__
+
+If you see red somewhere it means that package still needs to be overridden. Feel free to make an issue, but no guarantee that it will be fixed everywhere.
