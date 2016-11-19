@@ -5,6 +5,9 @@ bg = ''
 fg = ''
 ac = ''
 
+luminance = ''
+luminanceOffset = ''
+
 module.exports =
   activate: (state) ->
     bg = atom.config.get('chameleon-syntax.color.bg').toHexString()
@@ -34,20 +37,29 @@ module.exports =
 setColors = ->
   unsetColors() # prevents adding endless properties
 
+  # Black/white switch
+  if chroma( bg ).luminance() > 0.5
+    # Light Background
+    luminance = 'black'
+    luminanceOffset = 0.15
+  else
+    # Dark Background
+    luminance = 'white'
+    luminanceOffset = 0.4
 
-  # Color mixing
-  _bgHigh = chroma.mix( bg, 'white', 0.1); # mix with white
-  _bgMid  = bg                             # set by user
-  _bgLow  = chroma.mix( bg, 'black', 0.4); # mix with background
 
+  # Color mixing (base, to mix, how much)
+  _bgHigh = chroma.mix( bg, luminance, 0.1);           # mix with white
+  _bgMid  = bg                                         # set by user
+  _bgLow  = chroma.mix( bg, 'black', luminanceOffset); # mix with background
 
-  _fgHigh = chroma.mix( fg, 'white', 0.66); # mix with white
-  _fgMid  = fg                             # set by user
-  _fgLow  = chroma.mix( fg, _bgMid, 0.66); # mix with background
+  _fgHigh = chroma.mix( fg, luminance, 0.66); # mix with white
+  _fgMid  = fg                                # set by user
+  _fgLow  = chroma.mix( fg, _bgMid, 0.5);    # mix with background
 
-  _acHigh = chroma.mix( ac, 'white', 0.33); # mix with white
-  _acMid = ac                                           # set by user
-  _acLow  = chroma.mix( ac, _bgMid, 0.66); # mix with background
+  _acHigh = chroma.mix( ac, luminance, 0.33); # mix with white
+  _acMid = ac                                 # set by user
+  _acLow  = chroma.mix( ac, _bgMid, 0.66);    # mix with background
 
 
   # Color scales
@@ -72,6 +84,8 @@ setColors = ->
   root.style.setProperty('--ac-3', _acScale[2]) # <- set by user
   root.style.setProperty('--ac-4', _acScale[3])
   root.style.setProperty('--ac-5', _acScale[4])
+
+  root.style.setProperty('--bd', chroma.mix( _bgScale[3], _bgScale[4]) )
 
   root.style.setProperty('--cl-info',    chroma.mix( fg, 'hsl(208, 100%, 60%)', 0.75) )
   root.style.setProperty('--cl-success', chroma.mix( fg, 'hsl(150,  60%, 54%)', 0.75) )
