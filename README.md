@@ -4,7 +4,7 @@
 
 A color shifting syntax theme for Atom.
 
-![Chameleon UI theme](https://cloud.githubusercontent.com/assets/378023/20452091/96804838-ae45-11e6-8e72-917b5cfd6e43.gif)
+![Chameleon theme](https://cloud.githubusercontent.com/assets/378023/20452425/8c2716e4-ae4c-11e6-9e68-744460bdff44.gif)
 
 
 ### Install
